@@ -36,7 +36,7 @@ query Posts {
 
 <script>
 import Hero from "@/components/Hero"
-import Hero from "@/components/Sidebar"
+import Sidebar from "@/components/Sidebar"
 import ProjectsGrid from "@/components/ProjectsGrid"
 import LatestJournals from "@/components/LatestJournals"
 
