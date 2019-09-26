@@ -26,8 +26,8 @@ import 'vuesax/dist/vuesax.css' //Vuesax styles
 export default {
     data() {
         return {
-            settings: require("../../data/theme.json")
-              popupActivo:false,
+            settings: require("../../data/theme.json"),
+            popupActivo:false
         }
     }
 }
