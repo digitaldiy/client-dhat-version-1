@@ -1,7 +1,12 @@
 
 import Vue from 'vue'
-import { vsButton, vsSelect, vsPopup } from 'vuesax'
-import 'vuesax/dist/vuesax.css'
+import Vuesax from 'vuesax'
+
+import 'vuesax/dist/vuesax.css' //Vuesax styles
+Vue.use(Vuesax, {
+  // options here
+})
+
 
 
 
@@ -9,9 +14,15 @@ import 'vuesax/dist/vuesax.css'
     <footer class="footer">
         <div class="container">
             <span v-html="settings.footer" />
-            Vue.use(vsButton)
-Vue.use(vsSelect)
-Vue.use(vsPopup)
+            Vue.use(Vuesax, {
+   <vs-list>
+    <vs-list-item title="One text"></vs-list-item>
+    <vs-list-item title="Another text" subtitle="A little text"></vs-list-item>
+    <vs-list-item title="Some more text"></vs-list-item>
+    <vs-list-item title="Even more text" subtitle="Another little text"></vs-list-item>
+  </vs-list>
+})
+        
         </div>
     </footer>
 </template>
