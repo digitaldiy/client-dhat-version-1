@@ -1,7 +1,17 @@
+
+import Vue from 'vue'
+import { vsButton, vsSelect, vsPopup } from 'vuesax'
+import 'vuesax/dist/vuesax.css'
+
+
+
 <template>
     <footer class="footer">
         <div class="container">
             <span v-html="settings.footer" />
+            Vue.use(vsButton)
+Vue.use(vsSelect)
+Vue.use(vsPopup)
         </div>
     </footer>
 </template>
