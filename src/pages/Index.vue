@@ -36,14 +36,12 @@ query Posts {
 
 <script>
 import Hero from "@/components/Hero"
-import Sidebar from "@/components/Sidebar"
 import ProjectsGrid from "@/components/ProjectsGrid"
 import LatestJournals from "@/components/LatestJournals"
 
 export default {
   components: {
     Hero,
-    Sidebar,
     ProjectsGrid,
     LatestJournals
   }
