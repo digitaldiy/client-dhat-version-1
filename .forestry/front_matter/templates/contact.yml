@@ -1,5 +1,5 @@
 ---
-label: Home
+label: Contact
 hide_body: true
 fields:
 - name: opening
@@ -9,4 +9,4 @@ fields:
   default: ''
 
 pages:
-- data/home.json
+- data/contact.json
