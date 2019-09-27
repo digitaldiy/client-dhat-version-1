@@ -1,16 +1,8 @@
 <template>
-<vs-row
-  vs-align="center"
-  vs-type="flex" vs-justify="space-around" vs-w="12">
-  <vs-col :key="index" v-for="col,index in 4" vs-type="flex" vs-justify="center" vs-align="center" vs-w="2">
-   <vs-list >
-    <vs-list-item title="One text">{{ content.opening }}</vs-list-item>
-    <vs-list-item title="Another text" subtitle="A little text">{{ content.opening }}</vs-list-item>
-    <vs-list-item title="Some more text">{{ content.opening }}</vs-list-item>
+   <vs-list vs-align="center">
     <vs-list-item title="Even more text" subtitle="Another little text">{{ content.opening }}</vs-list-item>
   </vs-list>
-  </vs-col>
-  </vs-row>
+ 
 </template>
 
 <script>

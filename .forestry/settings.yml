@@ -18,18 +18,23 @@ sections:
   match: "**/*.md"
   templates:
   - journal
+  
 - type: document
   path: data/theme.json
   label: Theme config
+
 - type: document
   path: data/home.json
   label: Home
+
   - type: document
   path: data/about.json
   label: About
+
   - type: document
   path: data/contact.json
   label: Contact
+
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
