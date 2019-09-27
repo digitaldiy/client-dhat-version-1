@@ -1,18 +1,24 @@
 <template>
   <div class="layout" :class="{ 'sticky-header': $route.path === '/' }">
     <Header />
+    <Sidebar />
     <slot/>
     <Footer />
   </div>
 </template>
 
 <script>
+import Vue from 'vue'
+import Vuesax from 'vuesax'
+import 'vuesax/dist/vuesax.css' //Vuesax styles
 import Header from "@/components/Header"
+import Sidebar from "@/components/Sidebar"
 import Footer from "@/components/Footer"
 
 export default {
   components: {
     Header,
+    Sidebar,
     Footer
   }
 }
