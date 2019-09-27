@@ -1,7 +1,6 @@
 <template>
     <div class="hero">
-        <h1 class="hero-title" v-html="settings.hero_title" />
-        <h2 class="hero-subtitle" v-html="settings.hero_subtitle" />
+        <h1 class="hero-title" v-html="content.opening" />
     </div>
 </template>
 
@@ -9,7 +8,7 @@
 export default {
   data() {
     return {
-      settings: require("../../data/theme.json")
+      content: require("../../data/home.json")
     }
   }
 }
