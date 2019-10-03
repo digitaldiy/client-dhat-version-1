@@ -2,7 +2,13 @@
    <vs-list vs-align="center">
     <vs-list-item title="Even more text" subtitle="Another little text">{{ content.opening }}</vs-list-item>
   </vs-list>
- 
+   <vs-progress :percent="100" color="primary">primary</vs-progress>
+  <vs-progress :percent="90" color="warning">warning</vs-progress>
+  <vs-progress :percent="75" color="danger">danger</vs-progress>
+  <vs-progress :percent="60" color="success">success</vs-progress>
+  <vs-progress :percent="45" color="dark">dark</vs-progress>
+  <vs-progress :percent="30" color="rgb(164, 69, 15)">RGB</vs-progress>
+  <vs-progress :percent="15" color="#24c1a0">HEX</vs-progress>
 </template>
 
 <script>
