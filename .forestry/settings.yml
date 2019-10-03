@@ -25,13 +25,6 @@ sections:
   path: data/home.json
   label: Home Page
 
-  - type: document
-  path: data/about.json
-  label: About Page
-
-  - type: document
-  path: data/contact.json
-  label: Contact Page
 
 upload_dir: uploads
 public_path: "/uploads"
