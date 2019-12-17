@@ -1,6 +1,7 @@
 <template>
     <div class="hero">
-        <h1 class="hero-title" v-html="content.opening" />
+        <h1 class="hero-title" v-html="settings.hero_title" />
+        <h2 class="hero-subtitle" v-html="settings.hero_subtitle" />
     </div>
 </template>
 
@@ -8,7 +9,7 @@
 export default {
   data() {
     return {
-      content: require("../../data/home.json")
+      settings: require("../../data/theme.json")
     }
   }
 }
@@ -22,7 +23,6 @@ export default {
     margin: 0 auto;
     padding: 4rem 0 8rem 0;
 }
-
 .hero-title {
     font-size: 3rem;
     font-weight: 700;
