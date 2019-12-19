@@ -4,8 +4,8 @@
       
 
       <CardsSection :projects="$page.projects.edges" />
-   
- <div id='ndrsl-5df93f3387d3740573fd77a8' class='ndrsl-widget'/>
+      <Reviews/>
+ 
   </Layout>
 </template>
 
@@ -29,6 +29,7 @@ query Posts {
 <script>
 import Hero from "@/components/Hero"
 import MoreInfoModal from "@/components/MoreInfoModal"
+import Reviews from "@/components/Reviews"
 import CardWrap from "@/components/CardWrap"
 import CardsSection from "@/components/CardsSection"
 
@@ -37,7 +38,8 @@ export default {
     Hero,
     MoreInfoModal,
     CardWrap,
-    CardsSection
+    CardsSection,
+    Reviews
   }
 }
 </script>
