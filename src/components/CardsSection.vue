@@ -3,11 +3,11 @@
     <div id="cards">
         <div class="md-layout"> 
   
-          <div class="md-layout-item md-gutter md-size-33" v-for="item in projects" :key="item.node.id">
-            <profile-card v-for="item in projects" :key="item.node.id"
+      
+            <profile-card class="md-layout-item md-gutter md-size-25 md-small-size-50" v-for="item in projects" :key="item.node.id"
               :shadow-normal="false"
               :no-colored-shadow="false"
-              :card-image="cardProfile.cardProfile2"
+              :card-image="item.node.thumbnail"
             >
               <template slot="cardContent">
                 <h4 class="card-title">
@@ -42,7 +42,7 @@
         </div>
         </div>
         <!-- end Profile Cards -->
-    </div>
+   
 </template>
         
         
