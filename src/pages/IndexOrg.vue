@@ -1,6 +1,10 @@
 <template>
   <Layout>
-  <Hero/>
+  
+      
+
+      <CardsSection :projects="$page.projects.edges" />
+      <Reviews/>
  
   </Layout>
 </template>
@@ -24,18 +28,18 @@ query Posts {
 
 <script>
 import Hero from "@/components/Hero"
-
-
+import MoreInfoModal from "@/components/MoreInfoModal"
+import Reviews from "@/components/Reviews"
+import CardWrap from "@/components/CardWrap"
+import CardsSection from "@/components/CardsSection"
 
 export default {
   components: {
-    Hero
+    Hero,
+    MoreInfoModal,
+    CardWrap,
+    CardsSection,
+    Reviews
   }
 }
 </script>
-<style>
-.div{
-    background-color: white;
-   
-}
-</style>

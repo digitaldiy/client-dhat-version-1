@@ -1,10 +1,10 @@
 <template>
   <div class="wrapper">
     <div id="cards">
-        <div class="md-layout"> 
+        <div class="md-layout md-size-90 md-alignment-vertical-vertical"> 
   
       
-            <profile-card class="md-layout-item md-gutter md-size-25 md-small-size-50" v-for="item in projects" :key="item.node.id"
+            <profile-card class="md-layout-item md-gutter md-size-30 md-small-size-50" v-for="item in projects" :key="item.node.id"
               :shadow-normal="false"
               :no-colored-shadow="false"
               :card-image="item.node.thumbnail"
@@ -18,24 +18,8 @@
                 </h6>
               </template>
               <template slot="cardAction">
-                <md-button
-                  href="javasript:void(0)"
-                  class="md-twitter md-just-icon md-round"
-                >
-                  <i class="fab fa-twitter" />
-                </md-button>
-                <md-button
-                  href="javasript:void(0)"
-                  class="md-facebook md-just-icon md-round"
-                >
-                  <i class="fab fa-facebook" />
-                </md-button>
-                <md-button
-                  href="javasript:void(0)"
-                  class="md-google md-just-icon md-round"
-                >
-                  <i class="fab fa-google" />
-                </md-button>
+                
+                 <md-chip md-disabled v-for="(item, index) in item.node.categories" :key="index">{{ item }}</md-chip>
               </template>
             </profile-card>
           </div>

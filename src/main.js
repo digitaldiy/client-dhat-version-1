@@ -12,11 +12,14 @@ Vue.use(VueMaterial);
 
 export default function(Vue, { head }) {
   Vue.component("Layout", DefaultLayout);
-  head.bodyAttrs = {
-    class: settings.dark_mode ? "dark" : ""
-  };
+ 
   head.link.push({
     rel: 'stylesheet',
     href: 'https://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Material+Icons'
-  })
+  },
+  {
+    rel: 'stylesheet',
+    href: 'https://fonts.googleapis.com/css?family=Cookie|El+Messiri&display=swap'
+  }
+  )
 }

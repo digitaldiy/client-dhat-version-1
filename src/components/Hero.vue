@@ -1,7 +1,7 @@
 <template>
     <div class="hero">
-        <h1 class="hero-title" v-html="settings.hero_title" />
-        <h2 class="hero-subtitle" v-html="settings.hero_subtitle" />
+        <h1 class="hero-title" v-html="info.opening" />
+    
     </div>
 </template>
 
@@ -9,7 +9,7 @@
 export default {
   data() {
     return {
-      settings: require("../../data/theme.json")
+      info: require("../../data/home.json")
     }
   }
 }
@@ -18,16 +18,28 @@ export default {
 <style>
 .hero {
     text-align: center;
+    text-emphasis: wrap;
+    height:100vh;
     width: 480px;
-    max-width: 100%;
+    max-width: 100vw;
     margin: 0 auto;
     padding: 4rem 0 8rem 0;
+    background-color: white;
+     word-break: break-all;
+        word-wrap: break-word; /* old name */
+  overflow-wrap: break-word;
 }
 .hero-title {
     font-size: 3rem;
     font-weight: 700;
     padding: 0;
     margin: 0 0 2rem 0;
+    font-family: 'Cookie', cursive;
+    color:black;
+      word-break: break-all;
+        word-wrap: break-word; /* old name */
+  overflow-wrap: break-word;
+    
 }
 .hero-title p,
 .hero-subtitle p {
