@@ -3,7 +3,7 @@
   <Layout>
     
     <Services/>
-  
+  <Contact/>
   </Layout>
 </template>
 
