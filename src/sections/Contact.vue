@@ -1,15 +1,15 @@
 <template>
   <Layout>
-    <div class="md-layout hero md-gutter md-layout-itemmd-xsmall-size-100">
+    <div class="md-layout hero md-gutter md-layout-item md-xsmall-size-100">
   <div class="md-alignment-center-center">
   <h1  v-html="sectionInfo.FirstService" />
-  <ServiceWrap  :content="$page.acupuncture.edges" />
-  <h1  v-html="sectionInfo.SecondService" />
-  <ServiceWrap  :content="$page.aesthetics.edges" />
-  <h1  v-html="sectionInfo.ThirdService" />
-  <ServiceWrap  :content="$page.therapies.edges" />
+  
 
   </div></div>
+      <div class="md-layout hero md-gutter md-layout-item md-xsmall-size-100">
+ <div class="powr-map" id="2c67a51f_1579212806"/>
+
+  </div>
   </Layout>
 </template>
 

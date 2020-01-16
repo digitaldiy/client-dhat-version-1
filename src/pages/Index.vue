@@ -50,11 +50,12 @@ query Posts {
 
 <script>
 import Services from "@/sections/Services"
-
+import Contact from "@/sections/Contact"
 
 export default {
   components: {
-    Services
+    Services,
+    Contact
   }
 }
 </script>
