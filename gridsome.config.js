@@ -2,12 +2,24 @@
 // Learn more: https://gridsome.org/docs/config
 
 module.exports = {
-  siteName: "DHAT",
-  siteUrl: `https://www.itsnwa.com`,
+  siteName: "Dhat",
+  siteUrl: `https:dhat.co.uk`,
   host: "0.0.0.0",
   titleTemplate: "%s - NWA",
-  siteDescription: "Relief",
+  siteDescription: "Acupuncture & Therapies",
   plugins: [
+    {
+      use: "@gridsome/source-filesystem",
+      options: {
+        path: "journal/**/*.md",
+        typeName: "JournalPost",
+        resolveAbsolutePaths: true,
+        remark: {
+          externalLinksTarget: "_blank",
+          externalLinksRel: ["nofollow", "noopener", "noreferrer"]
+        }
+      }
+    },
     {
       use: "@gridsome/source-filesystem",
       options: {
@@ -23,8 +35,32 @@ module.exports = {
     {
       use: "@gridsome/source-filesystem",
       options: {
-        path: "journal/**/*.md",
-        typeName: "JournalPost",
+        path: "acupuncture/**/*.md",
+        typeName: "AcupuncturePost",
+        resolveAbsolutePaths: true,
+        remark: {
+          externalLinksTarget: "_blank",
+          externalLinksRel: ["nofollow", "noopener", "noreferrer"]
+        }
+      }
+    },
+    {
+      use: "@gridsome/source-filesystem",
+      options: {
+        path: "therapies/**/*.md",
+        typeName: "TherapiesPost",
+        resolveAbsolutePaths: true,
+        remark: {
+          externalLinksTarget: "_blank",
+          externalLinksRel: ["nofollow", "noopener", "noreferrer"]
+        }
+      }
+    },
+    {
+      use: "@gridsome/source-filesystem",
+      options: {
+        path: "aesthetics/**/*.md",
+        typeName: "AestheticsPost",
         resolveAbsolutePaths: true,
         remark: {
           externalLinksTarget: "_blank",

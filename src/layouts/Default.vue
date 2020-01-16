@@ -1,8 +1,9 @@
 <template>
   <div class="layout" :class="{ 'sticky-header': $route.path === '/' }">
     <Header />
+    <div class=container>
     <slot/>
-
+</div>
   </div>
 </template>
 
@@ -22,12 +23,12 @@ export default {
   box-sizing: border-box;
 }
 body {
-
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  
   margin:0;
   padding: 0;
-  font-size: 16px;
-
+  font-size: 10vh;
+  overflow:hidden;
 
 }
 
@@ -41,7 +42,8 @@ h1 {
   padding: 6rem 0 0 0;
 }
 .container {
-  max-width: 1200px;
+  text-align: center;
+  max-width: 120vh;
   margin: 0 auto;
   padding: 0 2rem;
 }

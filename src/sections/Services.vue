@@ -1,21 +1,33 @@
 <template>
-    <div class="hero">
-      <div class="hero-title">
-        <h1  v-html="info.opening" />
-        <br/><br/><br/><br/><br/>
-        <md-button class="md-simple" v-html="info.button"/>
-    </div></div>
+  <Layout>
+  <div class=wrap>
+  <h1  v-html="sectionInfo.FirstService" />
+  <ServiceWrap  :content="$page.acupuncture.edges" />
+  <h1  v-html="sectionInfo.SecondService" />
+  <ServiceWrap  :content="$page.aesthetics.edges" />
+  <h1  v-html="sectionInfo.ThirdService" />
+  <ServiceWrap  :content="$page.therapies.edges" />
+
+  </div>
+  </Layout>
 </template>
 
+
+
 <script>
+import ServiceWrap from "@/components/ServiceWrap"
 export default {
-  data() {
+          data() {
     return {
-      info: require("../../data/home.json")
+      sectionInfo: require("../../data/services.json")
     }
+  },
+  components: {
+    ServiceWrap
   }
 }
 </script>
+
 
 <style>
 .hero {
@@ -34,7 +46,7 @@ background-blend-mode: overlay, overlay, normal;
 
     
 }
-.hero-title {
+.wrap {
   
     font-size: 3rem;
     font-weight: 700;

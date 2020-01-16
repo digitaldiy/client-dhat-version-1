@@ -36,6 +36,7 @@
 import ProfileCard from "@/components/cards/ProfileCard";
 
 export default {
+  
   components: {
     ProfileCard,
   },

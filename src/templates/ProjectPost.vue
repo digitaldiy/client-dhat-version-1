@@ -1,90 +1,85 @@
 <template>
-  <Layout>
-    <div class="project">
-
-      <div class="container">
-
-        <div class="project-header">
-          <h1 class="project-title" v-html="$page.post.title" />
-          <div class="project-info">
-
-            <div class="categories-container">
-              <div class="categories">
-                <span class="label">Categories</span>
-                <span 
-                  class="category"
-                  v-for="(category, index) in $page.post.categories" 
-                  :key="index"
-                  v-text="category"
-                />
-              </div>
-            </div>
-
-            <div class="year-container">
-              <span class="label">Year</span>
-              <div v-html="$page.post.date"/>
-            </div>
+  <div class="wrapper">
+    <div id="cards">
+        <div class="md-layout md-size-90 md-alignment-vertical-vertical"> 
+  
+      
+            <profile-card class="md-layout-item md-gutter md-size-30 md-small-size-50" v-for="item in projects" :key="item.node.id"
+              :shadow-normal="false"
+              :no-colored-shadow="false"
+              :card-image="page.post.thumbnail"
+            >
+              <template slot="cardContent">
+                <h4 class="card-title" v-html="$page.post.title"/>
+              
+                <h6 class="card-category text-gray">
+                  CEO / Co-Founder
+                </h6>
+              </template>
+              <template slot="cardAction">
+                
+                 <md-chip md-disabled v-for="(item, index) in page.post.categories" :key="index">{{ item }}</md-chip>
+              </template>
+            </profile-card>
           </div>
         </div>
-
-        <div v-html="$page.post.content" class="content" />
-
-      </div>
-
-    </div>
-  </Layout>
+        </div>
+        <!-- end Profile Cards -->
+   
 </template>
+        
+        
 
-<page-query>
-query ProjectPost ($path: String!) {
-  post: projectPost (path: $path) {
-    title
-    date (format: "YYYY")
-    content
-    categories
-    project_bg_color
-    project_fg_color
-  }
-}
-</page-query>
 
 <script>
-export default {
-  metaInfo () {
-    return {
-      title: this.$page.post.title,
-      bodyAttrs: {
-        style: `background-color: ${this.$page.post.project_bg_color ? this.$page.post.project_bg_color : 'var(--color-base)'}; color: ${this.$page.post.project_fg_color ? this.$page.post.project_fg_color : 'var(--color-contrast)'}`
-      }
-    }
-  }
-}
-</script>
+import ProfileCard from "@/components/cards/ProfileCard";
 
-<style scoped>
-.project-header {
-  padding: 20vh 0 4rem 0;
-}
-.project-title {
-  font-size: 4rem;
-  margin: 0 0 4rem 0;
-  padding: 0;
-}
-.project-info {
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 0.8rem;
-}
-.project-info > div {
-  margin-right: 4rem;
-}
-.project-info > div:last-of-type {
-  margin: 0;
-}
-.category:after {
-  content: ', '
-}
-.category:last-of-type:after {
-  content: '';
-}
-</style>
+export default {
+  components: {
+    ProfileCard,
+  },
+  props: {
+    sectionCardPlain: Boolean,
+    sectionMorphingCards: Boolean,
+      projects: {
+            type: Array,
+            required: true
+        }
+  },
+  data() {
+    return {
+      manualRotateState: false,
+      manualRotateState2: false,
+      manualRotateState3: false,
+      cardBlog: {
+        cardBlog1: require("@/assets/img/examples/card-blog1.jpg"),
+        cardBlog2: require("@/assets/img/examples/card-blog2.jpg"),
+        cardBlog3: require("@/assets/img/examples/blog8.jpg"),
+        cardBlog4: require("@/assets/img/examples/blog5.jpg"),
+        cardBlog5: require("@/assets/img/examples/blog1.jpg"),
+        cardBlog6: require("@/assets/img/examples/blog6.jpg")
+      },
+      cardProfile: {
+        cardProfile1: require("@/assets/img/examples/card-profile4.jpg"),
+        cardProfile2: require("@/assets/img/examples/card-profile1.jpg")
+      },
+      cardFullBg: {
+        fullBg1: require("@/assets/img/examples/office1.jpg"),
+        fullBg2: require("@/assets/img/examples/card-blog3.jpg")
+      },
+      cardRotating: {
+        cardRotatingBg1: require("@/assets/img/examples/card-blog5.jpg"),
+        cardRotatingBg2: require("@/assets/img/examples/card-blog6.jpg")
+      },
+      dynamicShadows: {
+        dynamicShadowsBg1: require("@/assets/img/examples/color1.jpg"),
+        dynamicShadowsBg2: require("@/assets/img/examples/color2.jpg"),
+        dynamicShadowsBg3: require("@/assets/img/examples/color3.jpg")
+      },
+      avatarImg: require("@/assets/img/faces/avatar.jpg"),
+      christianImg: require("@/assets/img/faces/christian.jpg"),
+      marcImg: require("@/assets/img/faces/marc.jpg")
+    };
+  }
+};
+</script>

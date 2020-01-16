@@ -5,12 +5,33 @@ admin_path: "/static/admin"
 webhook_url: 
 sections:
 - type: directory
-  path: projects
-  label: Projects
+  path: acupuncture
+  label: Acupuncture
   create: documents
   match: "**/*.md"
   templates:
-  - project
+  - acupuncture
+- type: directory
+  path: therapies
+  label: Therapies
+  create: documents
+  match: "**/*.md"
+  templates:
+  - therapies
+  - type: directory
+  path: therapie
+  label: Therapie
+  create: documents
+  match: "**/*.md"
+  templates:
+  - therapie
+- type: directory
+  path: aesthetics
+  label: Aesthetics
+  create: documents
+  match: "**/*.md"
+  templates:
+  - aesthetics
 - type: directory
   path: journal
   label: Journal
@@ -18,12 +39,16 @@ sections:
   match: "**/*.md"
   templates:
   - journal
+  type: directory
+  path: projects
+  label: Projects
+  create: documents
+  match: "**/*.md"
+  templates:
+  - projects
 - type: document
   path: data/theme.json
   label: Theme config
-- type: document
-  path: data/home.json
-  label: Home Page
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''

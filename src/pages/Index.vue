@@ -1,13 +1,15 @@
+
 <template>
   <Layout>
-  <Hero/>
- 
+    
+    <Services/>
+  
   </Layout>
 </template>
 
 <page-query>
 query Posts {
-	projects: allProjectPost {
+	acupuncture: allAcupuncturePost (perPage: 4) {
     edges {
       node {
         id
@@ -16,6 +18,30 @@ query Posts {
         categories
         thumbnail (quality: 90)
         path
+          fileInfo {
+          directory
+   
+        }
+      }
+    }
+  },
+  aesthetics: allAestheticsPost (perPage: 4) {
+    edges {
+      node {
+        id
+        path
+        title
+        categories
+      }
+    }
+  },
+  therapies: allTherapiesPost (perPage: 4) {
+    edges {
+      node {
+        id
+        path
+        title
+        categories
       }
     }
   }
@@ -23,19 +49,15 @@ query Posts {
 </page-query>
 
 <script>
-import Hero from "@/components/Hero"
-
+import Services from "@/sections/Services"
 
 
 export default {
   components: {
-    Hero
+    Services
   }
 }
 </script>
-<style>
-.div{
-    background-color: white;
-   
-}
-</style>
+
+
+
