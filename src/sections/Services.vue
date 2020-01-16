@@ -1,6 +1,8 @@
 <template>
   <Layout>
-  <div class=wrap>
+    <div class="md-layout md-gutter md-layout-item md-medium-size-33 md-small-size-50 md-xsmall-size-100">
+
+  <div class="md-alignment-center-center">
   <h1  v-html="sectionInfo.FirstService" />
   <ServiceWrap  :content="$page.acupuncture.edges" />
   <h1  v-html="sectionInfo.SecondService" />
@@ -8,7 +10,7 @@
   <h1  v-html="sectionInfo.ThirdService" />
   <ServiceWrap  :content="$page.therapies.edges" />
 
-  </div>
+  </div></div>
   </Layout>
 </template>
 

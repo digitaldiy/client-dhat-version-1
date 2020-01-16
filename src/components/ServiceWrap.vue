@@ -1,16 +1,12 @@
 <template>
     
-        
-  
- <div class="md-layout md-size-90 md-alignment-vertical-vertical">
+<div>
    <div v-for="item in content" :key="item.node.id">
       <span class="md-subheading" v-html="item.node.title"/>
             <g-link :to="item.node.path">
               <md-button class="md-primary md-simple"> More Info</md-button>
             </g-link>
-         
-             
-              <Booking/>
+            <Booking/>
 </div></div>
     
 </template>

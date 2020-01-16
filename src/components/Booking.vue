@@ -1,10 +1,9 @@
 <template>
   <div>
     <md-dialog :md-active.sync="showDialog">
-  <div class="powr-contact-form" id="0c1e130f_1579201566"></div>
+    <div class="powr-contact-form" id="0c1e130f_1579201566"></div>
     </md-dialog>
-
-    <md-button class="md-primary md-raised" @click="showDialog = true">Show Dialog</md-button>
+    <md-button class="md-primary md-simple" @click="showDialog = true">Book</md-button>
   </div>
 </template>
 

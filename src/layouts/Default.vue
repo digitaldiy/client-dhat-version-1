@@ -41,12 +41,7 @@ h1 {
 .layout.sticky-header {
   padding: 6rem 0 0 0;
 }
-.container {
-  text-align: center;
-  max-width: 120vh;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
+
 @media (min-width: 860px) {
   .container {
     padding: 0 6rem;
