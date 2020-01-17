@@ -1,14 +1,12 @@
 <template>
     
-<div>
-   <div v-for="item in content" :key="item.node.id">
+ <div class="md-layout-item md-layout md-gutter">
+   <div class="md-layout-item" v-for="item in content" :key="item.node.id">
+        <g-link :to="item.node.path">
       <span class="md-subheading" v-html="item.node.title"/>
-            <g-link :to="item.node.path">
-              <md-button class="md-primary md-simple"> More Info</md-button>
-            </g-link>
-            <Booking/>
+   </g-link>
 </div></div>
-    
+
 </template>
 
 <script>
@@ -22,7 +20,6 @@ export default {
             type: Array,
             required: true
         }
-    
 }}
 </script>
 

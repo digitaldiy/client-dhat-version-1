@@ -28,7 +28,7 @@ font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helve
   margin:0;
   padding: 0;
   font-size: 10vh;
-  overflow:hidden;
+
 
 }
 

@@ -2,7 +2,6 @@
     <div class="hero">
       <div class="hero-title">
         <h1  v-html="info.opening" />
-        <br/><br/><br/><br/><br/>
         <md-button class="md-simple" v-html="info.button"/>
     </div></div>
 </template>

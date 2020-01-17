@@ -1,15 +1,16 @@
 <template>
   <Layout>
-    <div class="md-layout hero md-gutter md-layout-item md-xsmall-size-100">
-  <div class="md-alignment-center-center">
+    <div class="md-layout md-gutter">
+   <div class="md-layout-item" >
   <h1  v-html="sectionInfo.FirstService" />
   
 
-  </div></div>
-      <div class="md-layout hero md-gutter md-layout-item md-xsmall-size-100">
+  </div>
+  <div class="md-layout-item" >
+    
  <div class="powr-map" id="2c67a51f_1579212806"/>
 
-  </div>
+  </div></div>
   </Layout>
 </template>
 

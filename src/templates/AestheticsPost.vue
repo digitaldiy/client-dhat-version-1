@@ -1,40 +1,21 @@
 <template>
   <Layout>
-    <div class="project">
-
-      <div class="container">
-
-        <div class="project-header">
-          <vs-row vs-type="flex" vs-justify="space-around" vs-xs="12">
-    <vs-col  type="flex" vs-justify="center" vs-align="center" vs-w="3" vs-lg="3" vs-sm="4" vs-xs="12">
    
-          <h1 class="project-title" v-html="$page.post.title" />
-          </vs-col>
-             <vs-col   type="flex" vs-justify="center" vs-align="center" vs-w="3" vs-lg="3" vs-sm="4" vs-xs="12">
-   
-          <vs-button :color="colorx" type="flat">Go Back</vs-button>
-      <vs-button :color="colorx" type="flat">Book</vs-button>
-          </vs-col>
-          </vs-row>
-          <vs-divider/>
-          <vs-row vs-type="flex" vs-justify="space-around" vs-xs="12">
-      
-     <vs-chip
-                  class="category"
-                  v-for="(category, index) in $page.post.categories" 
+ <div class="md-layout-item md-layout md-gutter">
+        <div class="md-layout-item">
+        <span class="md-display-3" v-html="$page.post.title"/>
+        <span class="md-subheading"><g-link class="md-subheading" to="/#sec1">Back</g-link></span>
+        
+        <h2>What Is It?</h2>
+        <span class="md-headline" v-html="$page.post.content"/>
+        <h2> How Can It Help?</h2>
+        <h2> What can it be used to treat?</h2>
+        <span class="md-subheading"  v-for="(category, index) in $page.post.categories" 
                   :key="index"
-                  v-text="category"
-                />
-            
-   </vs-row>
-        </div>
- 
+                  >{{category}} </span>
+      <span class="md-subheading"><g-link class="md-subheading" to="/#sec1">Back</g-link></span>
 
-        <div v-html="$page.post.content" class="content" />
-
-      </div>
-
-    </div>
+    </div> </div>
   </Layout>
 </template>
 

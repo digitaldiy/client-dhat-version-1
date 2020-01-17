@@ -1,9 +1,21 @@
 
 <template>
   <Layout>
-    
-    <Services/>
-  <Contact/>
+
+
+<div >
+
+      <Services/>
+      <Contact/>
+</div>
+
+
+
+
+
+
+
+
   </Layout>
 </template>
 
@@ -51,9 +63,11 @@ query Posts {
 <script>
 import Services from "@/sections/Services"
 import Contact from "@/sections/Contact"
+import Hero from "@/components/Hero"
 
 export default {
   components: {
+
     Services,
     Contact
   }

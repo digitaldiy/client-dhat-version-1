@@ -1,5 +1,8 @@
 {
   "FirstService": "Acupuncture",
+  "FirstWhy": "From back pain to fertility treatment acupuncture has a wide array of benefits, try selecting one below to see how it can help you",
   "SecondService": "Aesthetics",
-  "ThirdService": "Therapies"
+  "SecondWhy": "Fancy a bit more me time, we can help there too, lets help rejuvinate your betity through one of our treatments below",
+  "ThirdService": "Therapies",
+  "ThirdWhy": "Need other types of relief we can help there too"
 }
