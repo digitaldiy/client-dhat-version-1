@@ -2,12 +2,20 @@
 <template>
   <Layout>
 
-
-<div >
-
-      <Services/>
+<md-layout class="container">
+    
+    <md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100" md-flex-large="100" md-flex-xlarge="100">
+      <Hero/>
+     <Services/>
       <Contact/>
-</div>
+    </md-layout>
+    
+ 
+    
+  </md-layout>
+
+
+
 
 
 
@@ -61,18 +69,42 @@ query Posts {
 </page-query>
 
 <script>
+import Hero from "@/components/Hero"
 import Services from "@/sections/Services"
 import Contact from "@/sections/Contact"
-import Hero from "@/components/Hero"
+
+
 
 export default {
   components: {
-
+    Hero,
     Services,
     Contact
+
   }
 }
 </script>
 
 
 
+<style>
+.container {
+  background-color: white;
+  min-height: 100px;
+  border-color: black;
+  align-items: center;
+  justify-content: center;
+  /*border-style: dotted;*/
+  border-width: 1px;
+  padding: 8px;
+}
+
+body {
+  background: #eee;
+}
+
+    
+
+
+
+</style>
