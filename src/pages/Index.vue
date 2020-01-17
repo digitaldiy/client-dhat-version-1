@@ -7,6 +7,7 @@
     <md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100" md-flex-large="100" md-flex-xlarge="100">
       <Hero/>
      <Services/>
+      <Reviews/>
       <Contact/>
     </md-layout>
     
@@ -71,6 +72,7 @@ query Posts {
 <script>
 import Hero from "@/components/Hero"
 import Services from "@/sections/Services"
+import Reviews from "@/components/Reviews"
 import Contact from "@/sections/Contact"
 
 
@@ -79,6 +81,7 @@ export default {
   components: {
     Hero,
     Services,
+    Reviews,
     Contact
 
   }
