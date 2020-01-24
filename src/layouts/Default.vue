@@ -1,6 +1,6 @@
 <template>
   <div class="layout" :class="{ 'sticky-header': $route.path === '/' }">
-    <Header />
+    <Nav />
     <div class=container>
     <slot/>
 </div>
@@ -8,11 +8,11 @@
 </template>
 
 <script>
-import Header from "@/components/Header"
+import Nav from "@/components/Nav"
 import Footer from "@/components/Footer"
 export default {
   components: {
-    Header
+    Nav
   }
 }
 </script>

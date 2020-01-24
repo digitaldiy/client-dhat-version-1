@@ -18,6 +18,7 @@
 
 <style lang="scss" scoped>
   .md-dialog {
+    padding: 5vh, 5vh, 5vh, 5vh;
     max-width: 80vh;
     max-height:80vh;
   }

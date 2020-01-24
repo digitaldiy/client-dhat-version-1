@@ -1,10 +1,14 @@
 <template>
-  <md-list
-    v-if="navMobileSection === 'true'"
-    class="nav-mobile-menu nav-mobile-section"
-  >
-    <slot />
-  </md-list>
+<mobile-menu nav-mobile-section="true">
+  <md-list-item href="javascript:void(0)">
+    <p>Link</p>
+  </md-list-item>
+
+  <md-list-item href="javascript:void(0)">
+    <p>Link</p>
+  </md-list-item>
+</mobile-menu>
+
 </template>
 
 <script>
