@@ -7,10 +7,7 @@ import "@/assets/scss/material-kit.scss";
 import "@/assets/demo.css";
 import "@/assets/code-highlight.css"
 
-import {Navbar} from 'buefy'
-import 'buefy/dist/buefy.css'
 
-Vue.use(Navbar);
 
 
 Vue.use(VueMaterial);

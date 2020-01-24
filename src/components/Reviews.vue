@@ -1,11 +1,9 @@
 <template>
-<div>
-     <h4 class="md-display-4 center">What are people saying</h4>
-      <md-divider class="md-inset"></md-divider>
-    <div id='ndrsl-5dfbad0887d3740573fd79e2' class='ndrsl-widget smaller'></div>
-</div>
+ <div class="md-layout md-gutter md-alignment-center neat">
+   <div class="md-layout-item md-medium-size-33 md-small-size-50 md-xsmall-size-100" v-for="item in content" :key="item.node.id">
+     <div id='ndrsl-5dfbad0887d3740573fd79e2' class='ndrsl-widget md-layout-item md-medium-size-33 md-small-size-50 md-xsmall-size-100 smaller'/>
+    </div></div>
 </template>
-
 <script>
 export default {
   data() {
@@ -22,4 +20,4 @@ export default {
     max-width: 80vh;
     max-height:80vh;
   }
-</style>
+</style>x

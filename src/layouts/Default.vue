@@ -1,18 +1,18 @@
 <template>
-  <div class="layout" :class="{ 'sticky-header': $route.path === '/' }">
-    <Nav />
+<div>
+    <NavBar />
     <div class=container>
     <slot/>
 </div>
-  </div>
+</div>
 </template>
 
 <script>
-import Nav from "@/components/Nav"
+import NavBar from "@/components/NavBar"
 import Footer from "@/components/Footer"
 export default {
   components: {
-    Nav
+    NavBar
   }
 }
 </script>

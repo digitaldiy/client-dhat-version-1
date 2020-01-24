@@ -1,11 +1,16 @@
 <template>
   <Layout>
-   
- <div class="md-layout-item md-layout md-gutter">
-        <div class="md-layout-item">
+   <div class="container">
+ <div class="md-layout md-gutter md-alignment-center neat">
+    <div class="md-layout-item md-medium-size-100 md-small-size-100 md-xsmall-size-100">
+        <div class="md-layout-item md-medium-size-80 md-small-size-100 md-xsmall-size-100">
         <span class="md-display-3" v-html="$page.post.title"/>
-        <span class="md-subheading"><g-link class="md-subheading" to="/#sec1">Back</g-link></span>
-        
+        </div>
+        <div class="md-layout-item md-medium-size-20 md-small-size-100 md-xsmall-size-100">
+          <span class="md-subheading"><g-link class="md-subheading" to="/#sec1">Back</g-link></span>
+        </div>
+        <div class="md-layout-item md-medium-size-100 md-small-size-100 md-xsmall-size-100">
+      
         <h2>What Is It?</h2>
         <span class="md-headline" v-html="$page.post.content"/>
         <h2> How Can It Help?</h2>
@@ -13,11 +18,14 @@
         <span class="md-subheading"  v-for="(category, index) in $page.post.categories" 
                   :key="index"
                   >{{category}} </span>
-      <span class="md-subheading"><g-link class="md-subheading" to="/#sec1">Back</g-link></span>
+    
 
-    </div> </div>
+    </div> </div></div></div>
   </Layout>
 </template>
+
+
+   
 
 <page-query>
 query AcupuncturePost ($path: String!) {
@@ -48,13 +56,13 @@ export default {
 
 <style scoped>
 .container {
-  padding: 20vh 0 4rem 0;
-  max-width: 75vw;
+min-height:90vh;
+ 
 }
 
 @media (min-width: 860px) {
   .container {
-     max-width: 55vw;
+     min-height: 80vw;
   }
 }
 </style>
