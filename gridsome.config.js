@@ -67,6 +67,14 @@ module.exports = {
           externalLinksRel: ["nofollow", "noopener", "noreferrer"]
         }
       }
+    },
+    {
+      use: 'gridsome-plugin-gtm',
+      options: {
+        id: 'GTM-NVT3MSD',
+        enabled: true,
+        debug: true
+      }
     }
   ],
   transformers: {
