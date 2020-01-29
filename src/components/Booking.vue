@@ -1,7 +1,7 @@
 <template>
   <div>
     <md-dialog :md-active.sync="showDialog">
-    <iframe src="https://www.powr.io/plugins/contact-form/view/22657594" style="width:100%;" height="529px" frameborder="0"/>
+   <div class="powr-contact-form" id="0c1e130f_1579201566"/>
     </md-dialog>
     <md-button class="md-primary md-simple" @click="showDialog = true">Book</md-button>
   </div>
