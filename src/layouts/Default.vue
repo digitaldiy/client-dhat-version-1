@@ -1,21 +1,13 @@
 <template>
 <div>
-    <NavBar />
+
     <div class=container>
     <slot/>
 </div>
 </div>
 </template>
 
-<script>
-import NavBar from "@/components/NavBar"
-import Footer from "@/components/Footer"
-export default {
-  components: {
-    NavBar
-  }
-}
-</script>
+
 
 
 <style>
