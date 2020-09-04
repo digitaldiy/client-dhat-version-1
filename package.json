@@ -15,7 +15,7 @@
     "dependencies": "^0.0.1",
     "gridsome": "^0.7.7",
     "gridsome-plugin-gtm": "^0.1.1",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "quasar": "^1.1.6",
     "sass-loader": "^8.0.0",
     "vue-burger-menu": "^2.0.3",
