@@ -8,6 +8,10 @@
 
 
       <Hero/>
+      <form id="siq_searchForm">
+     <input type="search" placeholder="Type here to search..." value="" name="s" />
+</form>
+<div id="siq_search_results"></div>
       <Services/>
       <Reviews/>
       <Contact/>
